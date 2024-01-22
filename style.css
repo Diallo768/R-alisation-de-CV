@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.2);
+}
+.container .left{
+    position: relative;
+    background:#167266;
+    padding: 40px;
+}
+.container .right{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .profileImg{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.profileText .profileImg Img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span{
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.info{
+    padding: 40px;
+}
+
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+}
+
+.info ul{
+    position: relative;
+}
+
+.info ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.info ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 20px;
+    color: #0af6d4;
+}
+
+.info ul li span{
+    color: #fff;
+    font-weight: 200;
+}
+
+.info .education li{
+    margin-bottom: 15px;
+}
+
+.info.education h4{
+    color: #06f6d6;
+    font-weight: 500;
+}
+
+.info.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #f0f0f0;
+    display: block;
+    margin-top: 5px;
+}
+
+.info.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #06f6d7;
+}
+.container .right{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 0px;
+}
+
+.title2{
+    color: #167266;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #333;
+}
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .year_company{
+    min-width: 150px;
+}
+
+.about .box .year_company h5{
+text-transform: uppercase;
+color: #848c90;
+font-weight: 600;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #06f6d7;
+    font-size: 16px;
+}
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: flex;
+    grid-template-columns: 150px 1ft;
+    justify-content: right;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 100;
+}
+
+.skills .box .precent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.skills .box .precent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:#06f6d7 ;
+}
+
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.interest ul li{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.interest ul li .icon{
+    color: #06f6d7;
+    font: size 18px; ;
+    width: 35px;
+}
+
+@media(max-width : 1000px){
+    .container{
+        margin: 15px;
+        grid-template-columns: repeat(1,1fr);   
+    }
+
+    .interest ul{
+grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width : 600px){
+    .about .box{
+        flex-direction: column;
+    }
+
+    .about .box .year_company{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
